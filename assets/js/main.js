@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="success-message" style="display: block;">
                 <div class="success-content">
                     <i data-lucide="check-circle"></i>
-                    <h3>You're on the list!</h3>
-                    <p>Thanks for signing up! We'll notify you as soon as Lemonoid launches.</p>
+                    <h3>You're on the waitlist!</h3>
+                    <p>Thanks for joining! We'll notify you as soon as CoContext launches with early access.</p>
                     <div class="success-actions">
                         <button class="btn-close" onclick="this.closest('.success-message').remove();">
                             Got it!
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function setLoading(loading) {
         if (loading) {
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i data-lucide="loader-2" class="loading"></i> Signing up...';
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="loading"></i> Joining...';
             lucide.createIcons();
         } else {
             submitBtn.disabled = false;
