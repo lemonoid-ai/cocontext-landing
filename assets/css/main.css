@@ -91,6 +91,7 @@ body {
     justify-content: center;
     padding: 2rem 0;
     background-color: var(--background);
+    position: relative;
 }
 
 .hero-layout {
@@ -481,7 +482,7 @@ body {
     }
     
     .brand-name {
-        font-size: var(--font-3xl-md);
+        font-size: var(--font-2xl-md);
         margin-bottom: 1.5rem;
     }
     
@@ -691,4 +692,147 @@ body {
     padding: 2px 6px;
     border-radius: 4px;
     font-weight: 600;
+}
+
+/* How It Works Section */
+.how-it-works-box {
+    background: var(--purple-dark);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 40px rgba(111, 94, 118, 0.2);
+    margin-bottom: 2rem;
+}
+
+.how-header {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.how-badge {
+    background: #4FB286;
+    color: var(--purple-dark);
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: var(--font-3xl);
+    transform: rotate(-3deg);
+    display: inline-block;
+}
+
+.how-title {
+    color: var(--white);
+    font-size: var(--font-3xl);
+    font-weight: 700;
+}
+
+.how-description {
+    font-size: var(--font-lg);
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    background-color: #594362;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.how-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.how-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: var(--font-base);
+    line-height: 1.5;
+}
+
+.how-list li:last-child {
+    margin-bottom: 0;
+}
+
+.how-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--background);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Footer Indicators */
+.footer-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 0;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(111, 94, 118, 0.3);
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--purple-dark);
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* Media queries for How It Works section */
+@media (min-width: 768px) {
+    .how-it-works-box {
+        flex: 0 0 450px;
+        display: block;
+    }
+    
+    .footer-indicators {
+        display: none;
+    }
+}
+
+/* Show the how it works box on mobile */
+@media (max-width: 767px) {
+    .how-it-works-box {
+        display: block;
+        margin: 2rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .how-badge {
+        font-size: var(--font-base);
+        padding: 6px 16px;
+    }
+    
+    .how-title {
+        font-size: var(--font-2xl);
+    }
+    
+    .how-description {
+        font-size: var(--font-base);
+        margin-bottom: 1.5rem;
+    }
+    
+    .how-list li {
+        font-size: var(--font-sm);
+        margin-bottom: 1.25rem;
+    }
+    
+    .how-icon {
+        width: 20px;
+        height: 20px;
+    }
 }
